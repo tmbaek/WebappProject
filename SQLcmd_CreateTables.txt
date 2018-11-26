@@ -1,0 +1,18 @@
+USE OnlineShop
+
+create table USERS(Username VARCHAR(15), Passwd VARCHAR(15), First_Name VARCHAR(15), LastName VARCHAR(15));
+insert into Users values('tmbaek', 'tmbaek000', 'Taemin', 'Baek');
+insert into Users values('ivan', 'ivan000', 'Ivan', 'Jasso Cruz');
+
+
+create table CARS(car_id VARCHAR(15), car_name VARCHAR(15), price DECIMAL( 8, 2), Added_date DATETIME, Files VARBINARY(MAX));
+insert into CARS (car_id, car_name, price, Added_date, Files)
+select 'KK0001', 'Optima EX', '32119.00', '2018-01-12', 
+	* FROM OPENROWSET(BULK N'C:\Users\น้ลยนฮ\Documents\Lambton\2018_Fall\CSD 3354-3_WebApp\Assignment4-5\OnlineShop2\OnlineShop2\images\optima-EX.jpeg', SINGLE_BLOB) image;
+insert into CARS (car_id, car_name, price, Added_date, Files)
+select 'KK0002', 'Optima LX+', '30618.00', '2018-01-17', 
+    * FROM OPENROWSET(BULK N'C:\Users\น้ลยนฮ\Documents\Lambton\2018_Fall\CSD 3354-3_WebApp\Assignment4-5\OnlineShop2\OnlineShop2\images\optima-LXplus.jpeg', SINGLE_BLOB) image;
+insert into CARS (car_id, car_name, price, Added_date, Files)
+select 'KK0003', 'Sedona LX', '34518.00', '2018-01-17',
+	* FROM OPENROWSET(BULK N'C:\Users\น้ลยนฮ\Documents\Lambton\2018_Fall\CSD 3354-3_WebApp\Assignment4-5\OnlineShop2\OnlineShop2\images\sedona-LX.jpeg', SINGLE_BLOB) image;
+
