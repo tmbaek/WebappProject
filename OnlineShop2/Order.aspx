@@ -47,7 +47,7 @@ This is Order page<br />
         <tr>
             <td class="modal-sm" style="font-weight: bold; font-size: medium; text-align: right">&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Size="Medium" Height="37px" OnClick="Button1_Click" Text="Order" Width="141px" />
+                <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Size="Medium" Height="37px" OnClick="Button1_Click" Text="Add to Cart" Width="141px" />
             </td>
         </tr>
     </table>

@@ -11,7 +11,11 @@ namespace OnlineShop2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["username"] != null)
+            {
+                Label1.Text = "Welcome " + Session["username"].ToString();
+                Label1.Visible = true;
+            }
         }
     }
 }

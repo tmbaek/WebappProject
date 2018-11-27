@@ -46,13 +46,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/" style="font-size: x-large; font-weight: bold; font-style: italic">KIKIA</a>
-                </div>
+                    <a class="navbar-brand" runat="server" href="~/" style="font-size: x-large; font-weight: bold; font-style: italic">KIKIA
+                    </a>
+                &nbsp;</div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/Login">Login</a></li>
-                        <li><a runat="server" href="~/SignUp">SignUP-new user</a></li>
+                        <li><a runat="server" href="~/">Home </a></li>
+                        <li><a runat="server" href="~/Login">Login </a></li>
+                        <li><a runat="server" href="~/SignUp">SignUP-new user </a></li>
+                        
+                        <li><a><asp:Label ID="Label1" runat="server" Text="Label" Font-Bold="True" ForeColor="#FFFFCC" Height="30" Visible="False">Label</asp:Label></a></li>
                     </ul>
                 </div>
             </div>
