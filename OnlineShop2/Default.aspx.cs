@@ -41,9 +41,21 @@ namespace OnlineShop2
             }
         }
 
-        protected void ImgButton_Click(object sender, EventArgs e)
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            Response.Redirect("Order.aspx");
+            if (e.CommandName == "Select")
+            {
+                //Determine the RowIndex of the Row whose Button was clicked.
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+
+                //Reference the GridView Row.
+                GridViewRow row = GridView1.Rows[rowIndex];
+
+                //Fetch value of Country
+                string model = row.Cells[1].Text;
+                Response.Redirect("Order.aspx?model=" + model);
+                
+            }
         }
     }
 }

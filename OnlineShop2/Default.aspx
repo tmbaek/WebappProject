@@ -9,11 +9,11 @@
     * Click a image to order<br />
  
     <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowDataBound="OnRowDataBound">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowDataBound="OnRowDataBound" OnRowCommand="GridView1_RowCommand">
         <Columns>
             <asp:TemplateField HeaderText="Image">
             <ItemTemplate>
-                <asp:ImageButton ID="car_image" runat="server" Height="120px" Width="150px" OnClick="ImgButton_Click" />
+                <asp:ImageButton ID="car_image" runat="server" Height="120px" Width="150px" CommandName="Select" CommandArgument="<%# Container.DataItemIndex %>"  />
             </ItemTemplate>
             </asp:TemplateField>
             <asp:BoundField DataField="car_name" HeaderText="Model" SortExpression="car_name" />
