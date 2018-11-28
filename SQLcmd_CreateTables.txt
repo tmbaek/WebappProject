@@ -16,3 +16,7 @@ insert into CARS (car_id, car_name, price, Added_date, Files)
 select 'KK0003', 'Sedona LX', '34518.00', '2018-01-17',
 	* FROM OPENROWSET(BULK N'C:\Users\¹éÅÂ¹Î\Documents\Lambton\2018_Fall\CSD 3354-3_WebApp\Assignment4-5\OnlineShop2\OnlineShop2\images\sedona-LX.jpeg', SINGLE_BLOB) image;
 
+
+create table OrderList(order_id VARCHAR(10), Username VARCHAR(15), car_id VARCHAR(15), qty INTEGER, total_price DECIMAL( 8, 2), Order_date DATETIME default GETDATE());
+
+insert into OrderList values('1', 'tmbaek', 'KK0003', 4, 33333.00, default);
