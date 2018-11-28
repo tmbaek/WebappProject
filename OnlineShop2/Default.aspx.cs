@@ -17,7 +17,7 @@ namespace OnlineShop2
         {
             if (!this.IsPostBack)
             {
-                SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-ADUB1NO\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
+                SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-LIVORGS\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
                 conn.Open();
 
                 string viewProducts = "SELECT files, car_name, price, added_date from CARS";

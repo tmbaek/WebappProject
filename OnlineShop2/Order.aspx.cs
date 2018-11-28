@@ -13,7 +13,7 @@ namespace OnlineShop2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-ADUB1NO\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
+            SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-LIVORGS\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
             conn.Open();
 
             string viewProducts = "SELECT files, car_id, car_name, price, added_date from CARS where car_name='" + Request.QueryString["model"] + "'";
