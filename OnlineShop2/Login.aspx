@@ -4,11 +4,13 @@
 
     <!DOCTYPE html>
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html>
 
     <body>
         
             <div>
+                <br />
+                <br />
                 <asp:Label ID="Label1" runat="server" Text="Username :"></asp:Label>
                 <asp:TextBox ID="TextBox1" runat="server">Enter username</asp:TextBox>
             </div>
@@ -16,6 +18,7 @@
             <asp:TextBox ID="TextBox2" runat="server">Enter Password</asp:TextBox>
             <br />
             <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
        
     </body>

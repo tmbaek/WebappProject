@@ -13,7 +13,7 @@ namespace OnlineShop2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-LIVORGS\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
+            SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-ADUB1NO\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
             conn.Open();
 
             string viewProducts = "SELECT files, car_id, car_name, price, added_date from CARS where car_name='" + Request.QueryString["model"] + "'";
@@ -37,11 +37,13 @@ namespace OnlineShop2
         protected void Button1_Click(object sender, EventArgs e)
         {
             string carID = TextBox1.Text;
+            string carname = TextBox2.Text;
             string unitPrice = TextBox3.Text;
             string qty = DropDownList1.SelectedValue;
             double totalPrice = Convert.ToDouble(unitPrice) * Convert.ToInt32(qty);
-            Response.Redirect("ItemsofOrder.aspx?carID=" + carID 
-                              +"&unitPrice=" + unitPrice 
+            Response.Redirect("ItemsofOrder.aspx?carID=" + carID
+                              + "&carname=" + carname
+                              + "&unitPrice=" + unitPrice 
                               +"&qty=" + qty
                               +"&totalPrice=" + totalPrice);
         }

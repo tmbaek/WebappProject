@@ -25,13 +25,13 @@ This is Order page<br />
             <td style="height: 20px">
                 <asp:TextBox ID="TextBox3" runat="server" Height="32px" Width="207px"></asp:TextBox>
             </td>
-            &nbsp;</tr>
+        </tr>
         <tr>
             <td class="modal-sm" style="font-weight: bold; font-size: medium; text-align: right">Date Produced :</td>
             <td>
                 <asp:TextBox ID="TextBox4" runat="server" Height="32px" Width="207px"></asp:TextBox>
             </td>
-            &nbsp;</tr>
+        </tr>
         <tr>
             <td class="modal-sm" style="font-weight: bold; font-size: medium; text-align: right">Qty :</td>
             <td>

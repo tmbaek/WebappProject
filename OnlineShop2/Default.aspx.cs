@@ -17,7 +17,7 @@ namespace OnlineShop2
         {
             if (!this.IsPostBack)
             {
-                SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-LIVORGS\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
+                SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-ADUB1NO\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
                 conn.Open();
 
                 string viewProducts = "SELECT files, car_name, price, added_date from CARS";
@@ -43,18 +43,26 @@ namespace OnlineShop2
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "Select")
+            if (Session["username"] != null)
             {
-                //Determine the RowIndex of the Row whose Button was clicked.
-                int rowIndex = Convert.ToInt32(e.CommandArgument);
+                if (e.CommandName == "Select")
+                {
+                    //Determine the RowIndex of the Row whose Button was clicked.
+                    int rowIndex = Convert.ToInt32(e.CommandArgument);
 
-                //Reference the GridView Row.
-                GridViewRow row = GridView1.Rows[rowIndex];
+                    //Reference the GridView Row.
+                    GridViewRow row = GridView1.Rows[rowIndex];
 
-                //Fetch value of Country
-                string model = row.Cells[1].Text;
-                Response.Redirect("Order.aspx?model=" + model);
-                
+                    //Fetch value of Country
+                    string model = row.Cells[1].Text;
+                    Response.Redirect("Order.aspx?model=" + model);
+
+                }
+            }
+
+            else
+            {
+                Response.Redirect("Login.aspx");
             }
         }
     }

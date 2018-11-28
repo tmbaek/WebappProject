@@ -20,7 +20,7 @@ namespace OnlineShop2
         {
             try
             {
-                SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-LIVORGS\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
+                SqlConnection conn = new SqlConnection(@"Data Source = DESKTOP-ADUB1NO\SQLEXPRESS; Initial Catalog =OnlineShop; Integrated Security = True");
                 conn.Open();
                 string insert = "insert into USERS (Username, Passwd, First_Name, LastName) values (@Username, @Passwd, @First_Name, @LastName)";
                 SqlCommand cmd = new SqlCommand(insert, conn);
@@ -38,6 +38,6 @@ namespace OnlineShop2
             }
         }
 
-       
+
     }
 }
